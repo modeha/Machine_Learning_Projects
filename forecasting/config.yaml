@@ -1,0 +1,29 @@
+data:
+  interval: 'H'
+  path: './dataset/'
+  index_column: 'date_creation'
+  index: 6
+
+model:
+  model_type: 'lstm'  # Choose between 'lstm' and 'lstm_cnn'
+  prediction_period: 336
+  n_in: 1
+  n_out: 5
+  lstm_units: 1500
+  dropout_rate: 0.2
+  n: 28
+  cnn_filters: 64
+  cnn_kernel_size: 3
+
+training:
+  learning_rate: 0.001
+  loss_function: 'mae'
+  epochs: 30
+  batch_size: 128
+
+evaluation:
+  y_limits: null
+  plot_filename: './output/'
+  model_name: 'LSTM_forecast'
+  save_plots: true  # Set to true to save plots
+  loss_plot_filename: './output/'  # Filename for saving the loss plot
