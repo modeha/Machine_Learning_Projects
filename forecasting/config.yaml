@@ -9,7 +9,7 @@ model:
   prediction_period: 336
   n_in: 1
   n_out: 5
-  lstm_units: 1500
+  lstm_units: 500
   dropout_rate: 0.2
   n: 28
   cnn_filters: 64
